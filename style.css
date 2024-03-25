@@ -5,14 +5,14 @@
 html, body {
     height: 100%;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background: rgb(10, 10, 10);
 }
 
 .dashboard {
     display: grid;
-    grid-template-columns: 2fr 7.2fr;
+    grid-template-columns: 1.92fr 7.2fr;
     height: 100%;
-    margin: 0 290px;
-    border-right: 1px solid lightgray;
+    margin: 0 305px;
 }
 
 .sidebar {
@@ -64,6 +64,12 @@ html, body {
 
 .navigation-text {
     justify-self: start;
+}
+
+.main {
+    background: lightgrey;
+    display: grid;
+    grid-template-rows: 1.05fr 5fr;
 }
 
 .header {
@@ -171,26 +177,129 @@ input {
     grid-column: 2;
 }
 
-.main {
-    background: lightgrey;
-    display: grid;
-    grid-template-rows: 1fr 5.6fr;
-}
-
 .content {
     display: grid;
-    grid-template-columns: 3fr 1.3fr;
+    grid-template-columns: 3fr 1.15fr;
 }
 
 .content-part-one {
-    padding: 20px;
+    display: grid;
+    grid-template-rows: 1.082fr 14fr;
+}
+
+.content-part-one p {
+    font-size: 1.15em;
+    font-weight: 900;
+    align-self: end;
+    padding-left: 20px;
+    padding-bottom: 3px;
+}
+
+.cards {
+    padding: 5px 20px;
     gap: 20px;
     display: grid;
     grid-template: repeat(auto-fit, minmax(100px, 1fr)) / 1fr 1fr;
+    margin-bottom: 50px;
+}
+
+.cards > div {
+    border-radius: 7px;
+    background: white;
+    border-left: 7px solid orange;
+}
+
+.card {
+    display: grid;
+    grid-template: 0.7fr 3fr 1.5fr / 4fr 1.5fr 1.5fr 1.5fr;
+    padding: 25px 5px 15px 25px;
+}
+
+.card :nth-child(1) {
+    grid-column: 1 / 5;
+    font-size: 0.97em;
+    font-weight: 900;
 
 }
 
-.content-part-one > div {
-    border: 1px solid black;
-    height: 200px;
+.card :nth-child(2) {
+    grid-column: 1 / 5;
+    font-size: 0.85em;
+    color: gray;
+}
+
+.card-img-1 {
+    background: url(images/placeholder-icon-black.svg) no-repeat;
+    grid-column: 2;
+}
+
+.card-img-2 {
+    background: url(images/placeholder-icon-black.svg) no-repeat;
+}
+
+.card-img-3 {
+    background: url(images/placeholder-icon-black.svg) no-repeat;
+}
+
+.card-img {
+    width: 20px;
+    height: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+.content-part-two {
+    display: grid;
+    grid-template: 1fr 1fr / 1fr;
+}
+
+.announcements, 
+.trending {
+    display: grid;
+    grid-template: 1fr 6fr / 1fr;
+}
+
+.content-part-two p {
+    font-size: 1.15em;
+    font-weight: 900;
+    align-self: end;
+    padding-bottom: 3px;
+}
+
+.announce-div,
+.trend-div {
+    display: grid;
+    border-radius: 7px;
+    background: white;
+    margin: 4.5px 30px 0 0;
+}
+
+.announce-div {
+    padding: 20px;
+}
+
+.sub-announce {
+    display: grid;
+    grid-template: repeat(3, 0.8fr 3fr) / 1fr;
+    padding: 5px;
+}
+
+.trend-div {
+    margin: 4.5px 30px 55px 0;
+    padding: 15px;
+}
+
+.announce-title {
+    font-size: 0.8em;
+    font-weight: 900;
+}
+
+.announce-text {
+    font-size: 0.7em;
+    color: gray;
+}
+
+.underline {
+    border-bottom: 1px solid rgb(221, 221, 221);
+    margin-bottom: 10px;
 }
